@@ -1,0 +1,130 @@
+header {
+    width: 100%;
+    padding: 15px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: var(--fundo-padrao);
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    & .btn-default{
+        font-size: 12px;
+    }
+}
+
+#nav_list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 48px;
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #424242;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+.nav-item.active a {
+    color: var(--color-primary-2);
+    font-weight: 600;
+}
+
+#navbar .line {
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    background-color: var(--navegacao);
+    transition: left 0.3s ease-in, width 0.3s ease-in;
+    z-index: 1;
+    left: 0;
+    width: 0;
+    transition: .3s;
+}
+
+
+
+#nav__logo {
+    font-size: 24px;
+    color: var(--color-primary-yellow);
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+}
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1170px) {
+
+    #nav_list,
+    #navbar .aqui {
+        display: none;
+    }
+
+    #nav__logo{
+        transform: scale(1.8);
+        margin-left: 30px;
+    }
+
+    #mobile_btn {
+        background-color: transparent;
+        transform: scale(2);
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: block;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0;
+        text-align: center;
+        transform: scale(1.8);
+    }
+
+    #mobile_navlist, button{
+        margin-top: 50px;
+        transform: scale(1.4);
+    }
+}

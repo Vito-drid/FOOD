@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="icon" href="SRC/img/burger-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="SRC/styles/style.css">
+
+    <title>FOOD</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-burger" id="nav__logo" onclick="window.location.reload();"> FOOD</i>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#avaliacoes">Avaliações</a>
+                </li>
+                <div class="line"></div>
+            </ul>
+
+            <button class="btn-default aqui">
+                Peça aqui!
+            </button>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#avaliacoes">Avaliações</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                Peça aqui
+            </button>
+
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="inicio">
+            <div class="shape">
+
+            </div>
+
+            <div id="cta">
+                <h1 class="title">
+                    O sabor vai até
+                    <span>você</span>
+                </h1>
+                <p class="description">
+                    Em busca de sabores únicos e experiências gastronômicas inesquecíveis? No nosso restaurante, você
+                    encontra pratos criativos e cuidadosamente preparados, que combinam ingredientes frescos com um
+                    toque de inovação. Nossa equipe está sempre pronta para surpreender seu paladar com opções
+                    autênticas e cheias de sabor. Venha descobrir novas sensações em um ambiente acolhedor e inspirador.
+                    Não perca a chance de explorar o extraordinário!
+                </p>
+
+                <div id="cta_btn">
+                    <a href="#" class="btn-default">Ver cardápio</a>
+                    <a href="tel:+0" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (69) 66666-9999
+                    </a>
+                </div>
+
+                <div class="social-media-btn">
+                    <a href="https://www.linkedin.com/in/victor-barros-6a2191282/?trk=opento_sprofile_topcard" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Vito-drid" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>    
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="SRC/img/hero.png" alt="">
+            </div>
+        </section>
+
+        <section id="cardapio">
+            <h2 class="section-title">Cardárpio</h2>
+            <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+            <div id="dishes">
+                <div class="dishe dish-card">
+                    <div class="dish-heart" onclick="toggleHeart(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="SRC/img/dish2.png" alt="prato2" class="dish-image">
+
+                    <div class="sobre">
+                        <h3 class="dish-title"> Sanduíche de Queijo Defumado</h3>
+                        <span class="dish-description">Sanduíche crocante com queijo defumado e ervas.</span>
+                        <div class="dish-rate">
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(750+)</span>
+                        </div>
+                    </div>
+                    <div class="dish-price">
+                        <h4>R$24,99</h4>
+                        <button class="btn-compra">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="dishe dish-card">
+                    <div class="dish-heart" onclick="toggleHeart(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="SRC/img/dish3.png" alt="prato3" class="dish-image">
+
+                    <div class="sobre">
+                        <h3 class="dish-title">
+                            Salada de Frutas Exóticas
+                        </h3>
+                        <span class="dish-description">
+                            Frutas tropicais frescas em uma combinação leve.
+                        </span>
+                        <div class="dish-rate">
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(500+)</span>
+                        </div>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$19,99</h4>
+                        <button class="btn-compra">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dishe dish-card">
+                    <div class="dish-heart" onclick="toggleHeart(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="SRC/img/dish.png" alt="prato1" class="dish-image">
+
+                    <div class="sobre">
+                        <h3 class="dish-title">
+                            Salada Gourmet de Frango
+                        </h3>
+                        <span class="dish-description">
+                            Frango grelhado com vegetais e molho especial.
+                        </span>
+                        <div class="dish-rate">
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(480+)</span>
+                        </div>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$14,99</h4>
+                        <button class="btn-compra">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dishe dish-card">
+                    <div class="dish-heart" onclick="toggleHeart(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="SRC/img/dish4.png" alt="prato5" class="dish-image">
+
+                    <div class="sobre">
+                        <h3 class="dish-title">
+                            Macarrão ao Molho de Tomate
+                        </h3>
+                        <span class="dish-description">
+                            Massa al dente com molho de tomate e manjericão.
+                        </span>
+                        <div class="dish-rate">
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star marelo"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(450+)</span>
+                        </div>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$14,99</h4>
+                        <button class="btn-compra">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <button class="btn-default mais">Ver mais pratos</button>
+
+        </section>
+    </main>
+
+    <section id="avaliacoes">
+        <img src="SRC/img/chef.png" alt="foto da cozinheira" id="testimonial_chef">
+
+        <div id="testimonials_content">
+            <h2 class="section-title">Depoimentos</h2>
+            <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
+
+            <div id="feedbacks">
+                <div class="feedback">
+                    <img src="SRC/img/circle-user-solid.svg" class="feedback-avatar" alt="avatar de usuario">
+                    <div class="feedback-content">
+                        <P>
+                            <span class="feedbakc-name">Carlos Almeida</span>
+                            <span class="hover-element" data-tooltip="Avaliação de Paula">
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                            </span>
+                        </P>
+                        <p>Pratos únicos e bem apresentados. Uma combinação perfeita de sabor e criatividade!</p>
+                    </div>
+                </div>
+
+                <div class="feedback">
+                    <img src="SRC/img/circle-user-solid.svg" class="feedback-avatar" alt="avatar de usuario">
+                    <div class="feedback-content">
+                        <P>
+                            <span class="feedbakc-name">Carla Ferreira</span>
+                            <span class="hover-element" data-tooltip="Avaliação de André">
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                                <i class="fa-solid fa-star marelo"></i>
+                            </span>
+                        </P>
+                        <p>Uma experiência incrível! Cada prato foi uma surpresa deliciosa. Com certeza voltarei!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-default">Ver mais avaliações</div>
+        </div>
+
+    </section>
+
+
+    <script src="SRC/javascript/script.js"></script>
+
+</body>
+
+<footer>
+    <img src="SRC/img/wave.svg" alt="">
+    <div id="footer_items">
+        <span id="copy_right">
+            &copy 2024 Victor Barros
+        </span>
+        <div class="social-media-btn">
+            <a href="https://www.linkedin.com/in/victor-barros-6a2191282/?trk=opento_sprofile_topcard" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Vito-drid" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</html>
