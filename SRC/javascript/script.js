@@ -29,40 +29,47 @@ $(document).ready(function () {
         });
 
         // Evento de rolagem para destacar a seção visível
-        $(window).on('scroll', function () {
-            const scrollPosition = $(window).scrollTop();
-            
-            let activeIndex = 0;
+        $(document).ready(function () {
+    // Remove a sombra do header ao carregar a página
+    $('header').css('box-shadow', 'none');
+    
+    // Evento de rolagem para atualizar a sombra do header
+    $(window).on('scroll', function () {
+        const scrollPosition = $(window).scrollTop();
         
-            // Atualiza o índice ativo baseado nas novas posições de rolagem
-            if (scrollPosition < 308.555) { 
-                activeIndex = 0;
-            } else if (scrollPosition >= 408.555 && scrollPosition < 1153) {
-                activeIndex = 1;
-            } else if (scrollPosition >= 1153) {
-                activeIndex = 2;
-            }
-        
-            navItems.removeClass('active');
-            $(navItems[activeIndex]).addClass('active');
-        
-            // Atualiza a posição da linha de destaque
-            const activeNavItem = $(navItems[activeIndex]);
-            const itemOffset = activeNavItem.offset().left - navList.offset().left;
-            const itemWidth = activeNavItem.outerWidth();
-        
-            $('.line').css({
-                left: itemOffset,
-                width: itemWidth
-            });
-        
-            // Remove a sombra do header quando a rolagem estiver na coordenada zero
-            if (scrollPosition === 0) {
-                $('header').css('box-shadow', 'none');
-            } else {
-                $('header').css('box-shadow', '0 0 12px 4px rgba(0, 0, 0, 0.06)');
-            }
+        let activeIndex = 0;
+
+        // Atualiza o índice ativo baseado nas novas posições de rolagem
+        if (scrollPosition < 308.555) { 
+            activeIndex = 0;
+        } else if (scrollPosition >= 408.555 && scrollPosition < 1153) {
+            activeIndex = 1;
+        } else if (scrollPosition >= 1153) {
+            activeIndex = 2;
+        }
+
+        navItems.removeClass('active');
+        $(navItems[activeIndex]).addClass('active');
+
+        // Atualiza a posição da linha de destaque
+        const activeNavItem = $(navItems[activeIndex]);
+        const itemOffset = activeNavItem.offset().left - navList.offset().left;
+        const itemWidth = activeNavItem.outerWidth();
+
+        $('.line').css({
+            left: itemOffset,
+            width: itemWidth
         });
+
+        // Remove a sombra do header quando a rolagem estiver na coordenada zero
+        if (scrollPosition === 0) {
+            $('header').css('box-shadow', 'none');
+        } else {
+            $('header').css('box-shadow', '0 0 12px 4px rgba(0, 0, 0, 0.2)');
+        }
+    });
+});
+
         
         // Inicializa a linha de destaque no carregamento da página
         const initialActiveNavItem = $('#nav_list .nav-item.active');
